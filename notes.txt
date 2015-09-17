@@ -1,0 +1,80 @@
+08-01-2015 - Lilu-lfs
+
+Found this:
+sed -i 's/copyright{/copyright\\{/' build-aux/update-copyright
+To fix the copyright fails.
+
+6.09_glibc-2.21
+2 fails:
+posix/tst-getaddrinfo4
+posix/tst-getaddrinfo5
+
+6.17_gcc-5.2.0
+one test under libstdc++ section, conformance.exp, took like 1/2 hour! Just
+sat there, cursor blinking but doing nothing else! All good though,
+eventually continued on.
+unknown test failed (will check logs and update)
+This was weird, because it seems like all of the tests passed, but at the
+very beginning of the log there is "autogen: Command not found" followed
+by some error alerts but little or no explanation.
+
+
+6.29_coreutils-8.24
+Part I: one fail
+FAIL: tests/misc/chroot-credentials.sh
+Part II: one fail
+FAIL: tests/misc/stty-pairs.sh
+
+6.31_m4-1.4.17
+one fail:
+FAIL: test-update-copyright.sh
+
+6.34_grep-2.21
+one fail: (yes it's the same as for m4)
+FAIL: test-update-copyright.sh
+
+^*^*^*^*^*^*^*^*^*^
+
+libtool-2.4.6
+64 failed (59 expected failures)
+so... 5 failures? That doesn't sound good!
+I guess it's pretty common:
+http://lfs.phayoune.org/lfs/build-logs/systemd/Core-i5-2430M/test-logs/103-libtool-2.4.6
+...continuing on.
+
+autoconf-2.691
+2 unexpected failures, out of 450 total:
+Compatibility with libtool (umm, doesn't sound good that one.)
+    501: Libtool    FAILED (foreign.at:61)
+autoscan
+    503: autoscan   FAILED (autoscan.at:44)
+
+automake-1.15
+FAIL: t/amopts-location.sh
+FAIL: t/add-missing-install-sh.sh
+FAIL: t/javadir-undefined.sh
+FAIL: t/java-mix.sh
+FAIL: t/location.sh
+FAIL: t/preproc-errmsg.sh
+FAIL: t/repeated-options.sh
+FAIL: t/src-acsubst.sh
+FAIL: t/vars3.sh
+FAIL: t/warnopts.sh
+FAIL: t/warnings-win-over-strictness.sh
+FAIL: t/yflags-conditional.sh
+ERROR: t/primary-prefix-invalid-couples.tap - missing test plan
+ERROR: t/primary-prefix-invalid-couples.tap - exited with status 1
+Summary:
+TOTAL: 2899
+PASS : 2689
+SKIP : 155
+XFAIL: 41
+FAIL : 12
+XPASS: 0
+ERROR: 2
+
+diffutils-3.3
+one fail:
+FAIL: test-update-copyright.sh
+
+ 

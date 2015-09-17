@@ -1,0 +1,10 @@
+make check 2>&1 | tee ../logs/XXX-check-log; \
+STAT=${PIPESTATUS[0]}; ( exit 0 )
+if (( STAT )); then
+    echo "Pull up another terminal and check the output"
+    echo "Shall we proceed? (say "'"yes"'" or "'"y"'" to proceed)"
+    read PROCEED
+    [ "$PROCEED" = "y" ] || [ "$PROCEED" = "yes" ]
+fi
+#
+#####################################################################

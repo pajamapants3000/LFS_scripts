@@ -1,0 +1,12 @@
+# Begin ~/.inputrc
+
+#  Allows single-tab tab-completion in bash, instead of having to tap twice.
+#set show-all-if-ambiguous on
+
+#  Something to try: vi keybindings in bash!
+#  If these are uncommented, be sure to uncomment the corresponding
+#+ set -o vi in ~/.bashrc
+#set editing-mode vi
+#set keymap vi
+
+# End ~/.inputrc

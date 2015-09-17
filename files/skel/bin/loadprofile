@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# loadprofile
+# Clears the guards and sources ~/.bash_profile
+# Must be sourced to work correctly
+export HOME_BASH_PROFILE=
+export ETC_PROFILE=
+source ${HOME}/.bash_profile
+
+# End loadprofile

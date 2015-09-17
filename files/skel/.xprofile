@@ -1,0 +1,11 @@
+#
+# Begin ~/.xprofile
+# *****************
+#
+# Be sure to append & to each program to be executed
+#
+
+#uxterm &
+#xclock &
+
+# End ~/.xprofile

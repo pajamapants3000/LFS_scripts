@@ -1,0 +1,87 @@
+LFS Guide
+*********
+[As root in host; make sure SYNCPATH is set; set lfs_profile]
+$cd ~
+$${SYNCPATH}/Copy/LFS/LFS7.7/scripts/4.000.sh
+[Examine Output]
+$passwd lfs
+$su - lfs
+$env
+[Examine output]
+$cd $LFS/sources
+$for NUM in $(seq -f "%03g" 0 999); do      [~100min on Bobby]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/5.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/5.$NUM"_"*.sh ] && ./scripts/5.$NUM"_"*.sh ); done
+[Check logs/sanitychecks]
+$exit (back to root)
+./scripts/5.999_final.sh
+(Then, staying as root!...)
+$for NUM in $(seq -f "%03g" 0 40); do           [Seconds]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/6.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/6.$NUM"_"*.sh ] && ./scripts/6.$NUM"_"*.sh ); done
+$cd /sources
+[1a: (This or 1b and do passwd root later)
+$for NUM in $(seq -f "%03g" 50 250); do         [~110SBU, ~500m on Bobby]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/6.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/6.$NUM"_"*.sh ] && ./scripts/6.$NUM"_"*.sh ); done
+$passwd root
+[Enter password]
+$for NUM in $(seq -f "%03g" 260 360); do        [~12SBU ~45m ..]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/6.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/6.$NUM"_"*.sh ] && ./scripts/6.$NUM"_"*.sh ); done
+]
+[1b:
+$for NUM in $(seq -f "%03g" 50 360); do         [~122SBU]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/6.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/6.$NUM"_"*.sh ] && ./scripts/6.$NUM"_"*.sh ); done
+$passwd root
+[Enter password]
+]
+$cd /sources
+$for NUM in $(seq -f "%03g" 370 710); do        [~42SBU]
+>   (($?)) && break ||
+>   ( [ ! -e ./scripts/6.$NUM"_"*.sh ] && (exit 0) ) ||
+>   ( [ -e ./scripts/6.$NUM"_"*.sh ] && ./scripts/6.$NUM"_"*.sh ); done
+$logout
+$./scripts/6.040_chroot.sh
+$cd /sources
+$./scripts/6.720_stripping.sh [OPTIONAL!]
+$./scripts/6.730_ch6cleanup.sh
+$logout
+$umount /boot
+$./scripts/6.735_chroot2.sh
+$cd /sources
+$./scripts/6.739_final.sh
+
+[Notes before proceeding:
+    Check logs/chapter6 and verify all is well.
+    the below assumes all values are properly entered in lfs_profile, and that
+    lfs_profile has been prepped for the given system. Also, the correct
+    .config file is present in files/. See notes below or examine scripts!
+    Finally, /boot must be unmounted!
+    Also, see notes about chapter loops in notes, todo; should do separately
+    for now.]
+$for chapter in 7 8;                            [timed on Tyrone at 4:47 to
+>   for NUM in $(seq -f "%03g" 0 99); do         <5:25 for kernel, error. Forgot
+>       (($?)) && break ||                        to complete, but close i think]
+>       ( [ ! -e ./scripts/$chapter.$NUM"_"*.sh ] && (exit 0) ) ||
+>       ( [ -e ./scripts/$chapter.$NUM"_"*.sh ] && ./scripts/$chapter.$NUM"_"*.sh ); done
+>   done
+[Double-check fstab, grub.cfg, kernel name/location, device files, etc.]
+$./scripts/9.000_wrapup.sh
+[chroot]$logout
+[root]$exit
+[lfs]$exit
+[root]$cd ~
+$. ~/Dropbox/LFS/LFS7.6/scripts/9.099_goodbye.sh
+$shutdown -r now
+
+THE END (whew!)
+=====================================================================\
+/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/|
+=====================================================================/
