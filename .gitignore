@@ -1,0 +1,4 @@
+# List of files for git to ignore
+#********************************
+# Ignore the mercurial repository data
+.hg

@@ -1,0 +1,96 @@
+Linux From Scratch
+******************
+
+Guide to using these scripts to build a  Linux system from scratch.
+
+Arch-Linux Install: Start with a simple Linux system with a full set of
+development tools. Arch-Linux takes only a few minutes and comes with
+everything you need. Just start with the base and base-devel meta-packages;
+Then also install wget, and optionally vim, gpm, lynx.
+
+If desired, download and install Copy; can run in the console. Lately I just
+put a copy of this folder on a USB drive and copy it over. Another great
+alternative is install git and/or mercurial (mercurial is probably a lighter
+addition) and clone this repo.
+
+If necessary, update lfs_profile for the current system and desired
+configuration. Use the systems already present as a guide. Give the system
+a name (e.g. Compyface).
+
+READY! 
+^^^^^^
+
+Note that the very first (4.000) and very last (9.999) scripts are run from
+the host system, not the copies on the target LFS system,
+unlike every other script run here. 
+
+Installation 
+************
+Here we assume files (this folder) are kept in /LFS on host (e.g. Arch-Linux)
+[As root user in host] 
+cd /LFS 
+$./lfs-profile Compyface
+[ NOTE 1: Make sure lfs_profile is set!; also check the beginning of scripts/4.000.sh,
+which starts out by sourcing lfs_profile. Once it does it should have all of
+the information it needs, assuming you set up lfs_profile correctly, but
+4.000.sh needs to find lfs_profile first!]
+[ NOTE 2: 4.000.sh is the ONLY script that requires internet access! An
+alternative is if you can download all of the packages listed in wget-list
+ahead of time. Otherwise, make sure you are online. ]
+$./scripts/4.000.sh 
+[Examine Output; see the Linux From scratch book for interpretation:
+http://www.linuxfromscratch.org/lfs/view/development/prologue/hostreqs.html
+    ]
+[From here we can disconnect from network]
+$passwd lfs
+[don't forget the hyphen!]
+$su - lfs
+$env
+[Examine output; should be minimal with LFS, LC_ALL, LFS_TGT, and PATH
+defined and /tools/bin at the front of PATH.]
+$cd $LFS/sources
+$source lfs_profile (TODO: at least until scripts all do)
+$./runner.sh 5 0 999 [~100min on Bobby, breaks out just before 5.999]
+[Check logs/sanitychecks]
+$su
+[Enter password]
+$./scripts/5.999_final.sh
+(Then, staying as root!...)
+$./runner6.sh 6 0 40 [Seconds]
+$cd /sources
+$source lfs_profile (TODO: at least until scripts all do)
+$./runner6.sh 6 50 360 [~122SBU]
+$passwd
+[Enter password]
+$cd /sources
+$./runner6.sh 6 370 710 [~42SBU]
+$logout
+$./scripts/6.040_chroot.sh
+$cd /sources
+$./scripts/6.720_stripping.sh [OPTIONAL!]
+$./scripts/6.730_ch6cleanup.sh
+$logout
+[ if /boot is on a separate partition: ]
+$umount /boot
+$./scripts/6.735_chroot2.sh
+$cd /sources
+$./scripts/6.739_final.sh
+[Notes before proceeding:
+Check logs/chapter6 and verify all is well.
+the below assumes all values are properly entered in lfs_profile, and that
+lfs_profile has been prepped for the given system. Also, the correct
+.config file is present in files/ (e.g. files/Compyface.config).
+See notes below or examine scripts!
+Finally, /boot must be unmounted! ]
+$./runner.sh 7 0 99
+[Note: Chapter 8, particularly 8.030-kernel and 8.040-grub should probably be done individually -- and carefully!]
+$./runner.sh 8 0 99
+[Double-check fstab, grub.cfg, kernel name/location, device files, etc.]
+$./scripts/9.000_wrapup.sh
+[chroot]$logout
+[root]$exit
+[lfs]$exit
+[root]$cd /LFS
+$./scripts/9.099_goodbye.sh
+$shutdown -r now
+THE END (whew!)
