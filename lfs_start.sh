@@ -41,6 +41,24 @@ variables=(
            "use_existing_grub"  \
            "grub_filepath"      \
            )
+envar=(
+       "LFSSRC"     \
+       "LFSVER"     \
+       "KERNELVER"  \
+       "LFSDEV"     \
+       "NULL"       \
+       "BOOTDEV"    \
+       "NULL"       \
+       "HOMEDEV"    \
+       "NULL"       \
+       "SWAPDEV"    \
+       "NULL"       \
+       "VARDEV"     \
+       "NULL"       \
+       "TMPDEV"     \
+       "NULL"       \
+       "GRUBFILE"   \
+       )
 usage()
 {
     cat << EOF
@@ -80,4 +98,3 @@ ask_question()
 }
 
 
-# As script, configure for current system:
