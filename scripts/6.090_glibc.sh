@@ -2,17 +2,19 @@
 set +h
 # Linux From Scratch
 # Chapter 6: Installing Basic System Software
-# Section 09: glibc-2.22
+# Section 09: glibc-${VERSION-glibc}
 #####################################################################
-tar -xvf glibc-2.22.tar.xz
-cd glibc-2.22
+source ../lfs_profile
+tar -xvf glibc-${VERSION-glibc}.tar.xz
+cd glibc-${VERSION-glibc}
 patch -Np1 -i ../glibc-2.22-fhs-1.patch
 if [ "x${ARCH:$((${#ARCH}-2)):2}" == "x86" ]; then
     patch -Np1 -i ../glibc-2.22-upstream_i386_fix-1.patch
 fi
+patch -Np1 -i ../glibc-2.22-largefile-1.patch
 mkdir -v ../glibc-build
 cd ../glibc-build
-../glibc-2.22/configure    \
+../glibc-${VERSION-glibc}/configure    \
     --prefix=/usr          \
     --disable-profile      \
     --enable-kernel=2.6.32 \
@@ -37,7 +39,7 @@ touch /etc/ld.so.conf
 make install
 #
 # nscd config and runtime dir
-cp -v ../glibc-2.22/nscd/nscd.conf /etc/nscd.conf
+cp -v ../glibc-${VERSION-glibc}/nscd/nscd.conf /etc/nscd.conf
 mkdir -pv /var/cache/nscd
 #
 # Locales
@@ -69,7 +71,7 @@ chown root:root /etc/nsswitch.conf
 chmod 644 /etc/nsswitch.conf
 #
 # Install timezone info
-tar -xf ../tzdata2015f.tar.gz
+tar -xf ../tzdata${VERSION-tzdata}.tar.gz
 ZONEINFO=/usr/share/zoneinfo
 mkdir -pv $ZONEINFO/{posix,right}
 for tz in etcetera southamerica northamerica europe africa antarctica  \
@@ -87,7 +89,7 @@ chown root:root /etc/ld.so.conf
 chmod 644 /etc/ld.so.conf
 mkdir -pv /etc/ld.so.conf.d
 cd ..
-rm -rf glibc-2.22
+rm -rf glibc-${VERSION-glibc}
 rm -rf glibc-build
 #####################################################################
 #

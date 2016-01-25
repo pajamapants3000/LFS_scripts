@@ -6,6 +6,8 @@ set +h
 #####################################################################
 tar -xvf xz-5.2.1.tar.xz
 cd xz-5.2.1
+sed -e '/mf\.buffer = NULL/a next->coder->mf.size = 0;' \
+        -i src/liblzma/lz/lz_encoder.c
 ./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/xz-5.2.1
 make
 make check 2>&1 | tee ../logs/6.53_xz-check-log; \

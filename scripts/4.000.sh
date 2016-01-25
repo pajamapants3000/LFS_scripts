@@ -5,7 +5,7 @@
 #  This script sources lfs_profile
 #####################################################################
 # Start by sourcing lfs_profile, which should be in our cwd
-source lfs_profile
+source ../lfs_profile
 cat >> /etc/profile << "EOF"
 ### Begin LFS Additions ###
 EOF

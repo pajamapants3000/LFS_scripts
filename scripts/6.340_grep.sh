@@ -8,7 +8,6 @@ set +h
 #####################################################################
 tar -xvf grep-2.21.tar.xz
 cd grep-2.21
-sed -i -e '/tp++/a  if (ep <= tp) break;' src/kwset.c
 ./configure --prefix=/usr --bindir=/bin
 make
 make check 2>&1 | tee ../logs/6.34_grep-check-log; \

@@ -3,12 +3,13 @@
 # Chapter 5: Constructing a Temporary System
 # Section 5: GCC - Pass 1
 #####################################################################
-tar -xvf gcc-5.2.0.tar.bz2
-cd gcc-5.2.0
+source ../lfs_profile
+tar -xvf gcc-${VERSION-gcc}.tar.bz2
+cd gcc-${VERSION-gcc}
 tar -xf ../mpfr-3.1.3.tar.xz
 mv -v mpfr-3.1.3 mpfr
-tar -xf ../gmp-6.0.0a.tar.xz
-mv -v gmp-6.0.0 gmp
+tar -xf ../gmp-6.1.0.tar.xz
+mv -v gmp-6.1.0 gmp
 tar -xf ../mpc-1.0.3.tar.gz
 mv -v mpc-1.0.3 mpc
 for file in \
@@ -26,7 +27,7 @@ do
 done
 mkdir -v ../gcc-build
 cd ../gcc-build
-../gcc-5.2.0/configure                             \
+../gcc-${VERSION-gcc}/configure                    \
     --target=$LFS_TGT                              \
     --prefix=/tools                                \
     --with-glibc-version=2.11                      \
@@ -50,7 +51,7 @@ cd ../gcc-build
 make
 make install
 cd ..
-rm -rf gcc-5.2.0
+rm -rf gcc-${VERSION-gcc}
 rm -rf gcc-build
 #####################################################################
 #

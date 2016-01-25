@@ -39,9 +39,10 @@ make install
 ln -sv ../usr/bin/cpp /lib
 ln -sv gcc /usr/bin/cc
 install -v -dm755 /usr/lib/bfd-plugins
-ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/5.2.0/liblto_plugin.so /usr/lib/bfd-plugins/
+ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/5.3.0/liblto_plugin.so \
+        /usr/lib/bfd-plugins/
 # Sanity check #1:
-echo 'main(){}' > dummy.c
+echo 'int main(){}' > dummy.c
 cc dummy.c -v -Wl,--verbose &> dummy.log
 echo >> ../logs/chapter6
 echo "Begin 6.17_gcc log:" >> ../logs/chapter6

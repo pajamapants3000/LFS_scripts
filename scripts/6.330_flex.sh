@@ -6,10 +6,8 @@ set +h
 #####################################################################
 tar -xvf flex-2.5.39.tar.xz
 cd flex-2.5.39
-# Skip three regression tests that require Bison
-sed -i -e '/test-bison/d' tests/Makefile.in
 # Proceed...
-./configure --prefix=/usr --docdir=/usr/share/doc/flex-2.5.39
+./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/flex-2.5.39
 make
 make check 2>&1 | tee ../logs/6.32_flex-check-log; \
 STAT=${PIPESTATUS[0]}; ( exit 0 )

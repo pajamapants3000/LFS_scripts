@@ -6,10 +6,6 @@ set +h
 #####################################################################
 tar -xvf e2fsprogs-1.42.13.tar.gz
 cd e2fsprogs-1.42.13
-# fix a potential security issue identified upstream
-sed -e '/int.*old_desc_blocks/s/int/blk64_t/' \
-    -e '/if (old_desc_blocks/s/super->s_first_meta_bg/desc_blocks/' \
-    -i lib/ext2fs/closefs.c
 #
 mkdir -v build
 cd build

@@ -33,7 +33,7 @@ set +h
 #####################################################################
 # CURRENTLY **NOT** IN SAFETY MODE!
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 if [ $BOOTDEV ]; then
     ROOTDEV=$BOOTDEV
 else
@@ -52,6 +52,7 @@ if [ $GRUBEXISTS == "yes" -o $GRUBEXISTS == "y" ]; then
 }\n\n\1@" /boot/grub/grub.cfg
 elif [ $GRUBEXISTS == "no" -o $GRUBEXISTS == "n" ]; then
     grub-install ${ROOTDEV:0:8}
+    [ -f /boot/grub/grub.cfg ] && mv /boot/grub/grub.{cfg,bak} || (exit 0)
     cat > /boot/grub/grub.cfg << "EOF"
 # Begin /boot/grub/grub.cfg
 set default=0

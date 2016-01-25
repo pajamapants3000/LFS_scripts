@@ -16,7 +16,7 @@ make html
 # Test suite critical!
 make check 2>&1 | tee gmp-check-log; ( exit 0 )
 #
-[ $(awk '/tests passed/{total+=$2} ; END{print total}' gmp-check-log) -eq 188 ]; \
+[ $(awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log) -eq 190 ]; \
 STAT=$?; ( exit 0 )
 if (( STAT )); then
     echo "Pull up another terminal and check the output"

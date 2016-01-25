@@ -19,6 +19,7 @@ if (( STAT )); then
 fi
 #
 make install
+chmod -v 0755 /usr/lib/preloadable_libintl.so
 cd ..
 rm -rf gettext-0.19.5.1
 #####################################################################

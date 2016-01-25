@@ -5,6 +5,7 @@
 # Defines the single SBU time unit
 # Required disk space: 545 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf binutils-2.25.1.tar.bz2
 cd binutils-2.25.1
 mkdir -v ../binutils-build

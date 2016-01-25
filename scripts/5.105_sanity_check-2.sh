@@ -3,7 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 10.5: Sanity Check
 #####################################################################
-echo 'main(){}' > dummy.c
+echo 'int main(){}' > dummy.c
 cc dummy.c
 echo "Sanity Check 2" >> logs/sanitychecks
 readelf -l a.out | grep ': /tools' |& tee -a logs/sanitychecks

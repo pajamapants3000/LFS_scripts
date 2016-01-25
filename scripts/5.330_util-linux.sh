@@ -3,9 +3,9 @@
 # Chapter 5: Constructing a Temporary System
 # Section 33: util-linux
 #####################################################################
-VER=2.27
-tar -xvf util-linux-${VER}.tar.xz
-cd util-linux-${VER}
+source ../lfs_profile
+tar -xvf util-linux-${VERSION-util_linux}.tar.xz
+cd util-linux-${VERSION-util_linux}
 ./configure --prefix=/tools                \
             --without-python               \
             --disable-makeinstall-chown    \
@@ -14,7 +14,7 @@ cd util-linux-${VER}
 make
 make install
 cd ..
-rm -rf util-linux-${VER}
+rm -rf util-linux-${VERSION-util_linux}
 #####################################################################
 #
 # Proceed to Section 34: xz

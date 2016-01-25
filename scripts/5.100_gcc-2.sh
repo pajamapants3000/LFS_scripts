@@ -3,8 +3,9 @@
 # Chapter 5: Constructing a Temporary System
 # Section 10: GCC - Pass 2
 #####################################################################
-tar -xvf gcc-5.2.0.tar.bz2
-cd gcc-5.2.0
+source ../lfs_profile
+tar -xvf gcc-${VERSION-gcc}.tar.bz2
+cd gcc-${VERSION-gcc}
 cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include-fixed/limits.h
 for file in \
@@ -20,19 +21,19 @@ do
 #define STANDARD_STARTFILE_PREFIX_2 ""' >> $file
   touch $file.orig
 done
-tar -xf ../mpfr-3.1.3.tar.xz
-mv -v mpfr-3.1.3 mpfr
-tar -xf ../gmp-6.0.0a.tar.xz
-mv -v gmp-6.0.0 gmp
-tar -xf ../mpc-1.0.3.tar.gz
-mv -v mpc-1.0.3 mpc
+tar -xf ../mpfr-${VERSION-mpfr}.tar.xz
+mv -v mpfr-${VERSION-mpfr} mpfr
+tar -xf ../gmp-${VERSION-gmp}.tar.xz
+mv -v gmp-${VERSION-gmp} gmp
+tar -xf ../mpc-${VERSION-mpc}.tar.gz
+mv -v mpc-${VERSION-mpc} mpc
 mkdir -v ../gcc-build
 cd ../gcc-build
 CC=$LFS_TGT-gcc                                    \
 CXX=$LFS_TGT-g++                                   \
 AR=$LFS_TGT-ar                                     \
 RANLIB=$LFS_TGT-ranlib                             \
-../gcc-5.2.0/configure                             \
+../gcc-${VERSION-gcc}/configure                    \
     --prefix=/tools                                \
     --with-local-prefix=/tools                     \
     --with-native-system-header-dir=/tools/include \
@@ -45,7 +46,7 @@ make
 make install
 ln -sv gcc /tools/bin/cc
 cd ..
-rm -rf gcc-5.2.0
+rm -rf gcc-${VERSION-gcc}
 rm -rf gcc-build
 #####################################################################
 #

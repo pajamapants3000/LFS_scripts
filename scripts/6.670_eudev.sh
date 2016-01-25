@@ -24,14 +24,9 @@ EOF
             --libexecdir=/lib       \
             --with-rootprefix=      \
             --with-rootlibdir=/lib  \
-            --enable-split-usr      \
             --enable-manpages       \
-            --enable-hwdb           \
-            --disable-introspection \
-            --disable-gudev         \
             --disable-static        \
             --config-cache          \
-            --disable-gtk-doc-html
 LIBRARY_PATH=/tools/lib make
 mkdir -pv /lib/udev/rules.d
 mkdir -pv /etc/udev/rules.d

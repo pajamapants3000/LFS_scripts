@@ -7,9 +7,9 @@ set +h
 VER=4.2.0
 tar -xvf iproute2-${VER}.tar.xz
 cd iproute2-${VER}
-sed -i '/^TARGETS/s@arpd@@g' misc/Makefile
 sed -i /ARPD/d Makefile
 sed -i 's/arpd.8//' man/man8/Makefile
+rm -v doc/arpd.sgml
 make
 make DOCDIR=/usr/share/doc/iproute2-${VER} install
 cd ..
