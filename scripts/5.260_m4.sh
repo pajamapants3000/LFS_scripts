@@ -5,6 +5,7 @@
 # Approximate build time: 0.2 SBU
 # Required disk space: 19 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf m4-1.4.17.tar.xz
 cd m4-1.4.17
 ./configure --prefix=/tools

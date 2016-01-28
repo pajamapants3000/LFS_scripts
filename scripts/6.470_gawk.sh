@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 47: gawk
 #####################################################################
+source ../lfs_profile
 tar -xvf gawk-4.1.3.tar.xz
 cd gawk-4.1.3
 ./configure --prefix=/usr

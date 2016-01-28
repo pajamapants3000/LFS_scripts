@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 32: texinfo-6.0
 #####################################################################
+source ../lfs_profile
 tar -xvf texinfo-6.0.tar.xz
 cd texinfo-6.0
 ./configure --prefix=/tools

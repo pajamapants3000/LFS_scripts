@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 67: eudev-3.1.2
 #####################################################################
+source ../lfs_profile
 tar -xvf eudev-3.1.2.tar.gz
 cd eudev-3.1.2
 # Fix a test script

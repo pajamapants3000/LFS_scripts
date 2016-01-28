@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 6: Linux-${KVER} API Headers
 #####################################################################
+source ../lfs_profile
 tar -xvf linux-${KVER}.tar.xz
 cd linux-${KVER}
 make mrproper

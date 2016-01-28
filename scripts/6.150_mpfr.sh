@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 15: mpfr-3.1.3
 #####################################################################
+source ../lfs_profile
 tar -xvf mpfr-3.1.3.tar.xz
 cd mpfr-3.1.3
 patch -Np1 -i ../mpfr-3.1.3-upstream_fixes-1.patch

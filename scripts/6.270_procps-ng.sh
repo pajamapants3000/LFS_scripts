@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 27: procps-ng-3.3.11
 #####################################################################
+source ../lfs_profile
 tar -xvf procps-ng-3.3.11.tar.xz
 cd procps-ng-3.3.11
 ./configure --prefix=/usr                            \

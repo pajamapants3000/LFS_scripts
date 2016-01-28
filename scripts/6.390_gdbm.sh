@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 39: gdbm-1.11
 #####################################################################
+source ../lfs_profile
 tar -xvf gdbm-1.11.tar.gz
 cd gdbm-1.11
 ./configure --prefix=/usr --enable-libgdbm-compat

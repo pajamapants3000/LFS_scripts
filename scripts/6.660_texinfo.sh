@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 66: texinfo-6.0
 #####################################################################
+source ../lfs_profile
 tar -xvf texinfo-6.0.tar.xz
 cd texinfo-6.0
 ./configure --prefix=/usr

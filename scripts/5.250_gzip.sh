@@ -5,6 +5,7 @@
 # Approximate build time: 0.1 SBU
 # Required disk space: 9.9 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf gzip-1.6.tar.xz
 cd gzip-1.6
 ./configure --prefix=/tools

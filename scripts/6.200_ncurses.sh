@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 20: ncurses-6.0
 #####################################################################
+source ../lfs_profile
 tar -xvf ncurses-6.0.tar.gz
 cd ncurses-6.0
 sed -i '/LIBTOOL_INSTALL/d' c++/Makefile.in

@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.9 SBU
 # Required disk space: 61 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf gmp-6.0.0a.tar.xz
 cd gmp-6.0.0
 ./configure --prefix=/usr \

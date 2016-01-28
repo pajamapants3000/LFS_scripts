@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 45: automake-1.15
 #####################################################################
+source ../lfs_profile
 tar -xvf automake-1.15.tar.xz
 cd automake-1.15
 ./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.15

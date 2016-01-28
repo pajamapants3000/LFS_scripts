@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 69: man-db-2.7.2
 #####################################################################
+source ../lfs_profile
 tar -xvf man-db-2.7.2.tar.xz
 cd man-db-2.7.2
 ./configure --prefix=/usr                  \

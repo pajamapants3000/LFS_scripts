@@ -5,6 +5,7 @@
 # Approximate build time: less than 0.1 SBU
 # Required disk space: 5.4 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf bzip2-1.0.6.tar.gz
 cd bzip2-1.0.6
 make

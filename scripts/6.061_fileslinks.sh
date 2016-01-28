@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 6: Creating Essential Files and Symlinks
 #####################################################################
+source ../lfs_profile
 ln -sv /tools/bin/{bash,cat,echo,pwd,stty} /bin
 ln -sv /tools/bin/perl /usr/bin
 ln -sv /tools/lib/libgcc_s.so{,.1} /usr/lib

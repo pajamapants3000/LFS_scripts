@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 13: binutils-2.25.1
 #####################################################################
+source ../lfs_profile
 tar -xvf binutils-2.25.1.tar.bz2
 cd binutils-2.25.1
 # Check:

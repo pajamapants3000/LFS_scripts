@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 38: libtool-2.4.6
 #####################################################################
+source ../lfs_profile
 tar -xvf libtool-2.4.6.tar.xz
 cd libtool-2.4.6
 ./configure --prefix=/usr

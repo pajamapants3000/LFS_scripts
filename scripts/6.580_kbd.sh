@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 58: kbd-2.0.3
 #####################################################################
+source ../lfs_profile
 tar -xvf kbd-2.0.3.tar.xz
 cd kbd-2.0.3
 patch -Np1 -i ../kbd-2.0.3-backspace-1.patch

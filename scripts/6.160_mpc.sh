@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 16: mpc-1.0.3
 #####################################################################
+source ../lfs_profile
 tar -xvf mpc-1.0.3.tar.gz
 cd mpc-1.0.3
 ./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/mpc-1.0.3

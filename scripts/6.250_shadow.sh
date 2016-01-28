@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 25: shadow-4.2.1
 #####################################################################
+source ../lfs_profile
 tar -xvf shadow-4.2.1.tar.xz
 cd shadow-4.2.1
 sed -i 's/groups$(EXEEXT) //' src/Makefile.in

@@ -6,6 +6,7 @@ set +h
 # Approximate build time: less than 0.1 SBU
 # Required disk space: 0.7 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf sysklogd-1.5.1.tar.gz
 cd sysklogd-1.5.1
 sed -i '/Error loading kernel symbols/{n;n;d}' ksym_mod.c

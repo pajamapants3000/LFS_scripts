@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 9: binutils-2.25.1 - Pass 2
 #####################################################################
+source ../lfs_profile
 tar -xvf binutils-2.25.1.tar.bz2
 cd binutils-2.25.1
 mkdir -v ../binutils-build

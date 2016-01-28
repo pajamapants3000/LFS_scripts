@@ -8,6 +8,7 @@
 #   Libstdc++-5.2.0 is part of the gcc package/tarball
 #
 #####################################################################
+source ../lfs_profile
 tar -xvf gcc-5.2.0.tar.bz2
 cd gcc-5.2.0
 mkdir -pv ../gcc-build

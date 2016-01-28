@@ -4,7 +4,7 @@ set +h
 # Chapter 7: System Configuration and Bootscripts
 # Section 4: Managing Devices
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 bash /lib/udev/init-net-rules.sh
 cat /etc/udev/rules.d/70-persistent-net.rules > logs/persistent-net_rules
 [ $1 ] && CDROM=$@

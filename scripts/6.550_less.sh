@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 55: less-458
 #####################################################################
+source ../lfs_profile
 tar -xvf less-458.tar.gz
 cd less-458
 ./configure --prefix=/usr --sysconfdir=/etc

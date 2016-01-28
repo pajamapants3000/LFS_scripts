@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 11: zlib-1.2.8
 #####################################################################
+source ../lfs_profile
 tar -xvf zlib-1.2.8.tar.xz
 cd zlib-1.2.8
 ./configure --prefix=/usr

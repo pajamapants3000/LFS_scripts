@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 12: file-5.24
 #####################################################################
+source ../lfs_profile
 tar -xvf file-5.24.tar.gz
 cd file-5.24
 ./configure --prefix=/usr

@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 50: intltool-0.51.0
 #####################################################################
+source ../lfs_profile
 tar -xvf intltool-0.51.0.tar.gz
 cd intltool-0.51.0
 # Fix a warning caused by perl-5.22 and later

@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 6: Creating Essential Files and Symlinks
 #####################################################################
+source ../lfs_profile
 # Initialize log files
 touch /var/log/{btmp,lastlog,wtmp}
 chgrp -v utmp /var/log/lastlog

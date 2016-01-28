@@ -2,3 +2,5 @@
 #********************************
 # Ignore the mercurial repository data
 .hg
+*.swp
+.gitignore

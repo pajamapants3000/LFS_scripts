@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 36: bash-4.3.30
 #####################################################################
+source ../lfs_profile
 tar -xvf bash-4.3.30.tar.gz
 cd bash-4.3.30
 patch -Np1 -i ../bash-4.3.30-upstream_fixes-2.patch

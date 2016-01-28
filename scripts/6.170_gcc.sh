@@ -4,7 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 17: gcc-5.2.0
 #####################################################################
-source lfs_profile
+source ../lfs_profile
 tar -xvf gcc-5.2.0.tar.bz2
 cd gcc-5.2.0
 mkdir -v ../gcc-build

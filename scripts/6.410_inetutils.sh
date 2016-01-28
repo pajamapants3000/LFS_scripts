@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 41: inetutils-1.9.4
 #####################################################################
+source ../lfs_profile
 tar -xvf inetutils-1.9.4.tar.xz
 cd inetutils-1.9.4
 ./configure --prefix=/usr  \

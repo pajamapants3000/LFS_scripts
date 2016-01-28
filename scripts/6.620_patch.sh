@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 62: patch-2.7.5
 #####################################################################
+source ../lfs_profile
 tar -xvf patch-2.7.5.tar.xz
 cd patch-2.7.5
 ./configure --prefix=/usr

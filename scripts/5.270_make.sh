@@ -5,6 +5,7 @@
 # Approximate build time: 0.1 SBU
 # Required disk space: 14.1 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf make-4.1.tar.bz2
 cd make-4.1
 ./configure --prefix=/tools --without-guile

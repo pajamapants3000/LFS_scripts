@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 34: xz-5.2.1
 #####################################################################
+source ../lfs_profile
 tar -xvf xz-5.2.1.tar.xz
 cd xz-5.2.1
 ./configure --prefix=/tools

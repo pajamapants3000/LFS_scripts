@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.1 SBU
 # Required disk space: 6.4 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf acl-2.2.52.src.tar.gz
 cd acl-2.2.52
 sed -i -e 's|/@pkg_name@|&-@pkg_version@|' include/builddefs.in

@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 7: glibc-2.22
 #####################################################################
+source ../lfs_profile
 tar -xvf glibc-2.22.tar.xz
 cd glibc-2.22
 #

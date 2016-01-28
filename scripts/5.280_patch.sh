@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 28: patch-2.7.5
 #####################################################################
+source ../lfs_profile
 tar -xvf patch-2.7.5.tar.xz
 cd patch-2.7.5
 ./configure --prefix=/tools

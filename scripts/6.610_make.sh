@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 61: make-4.1
 #####################################################################
+source ../lfs_profile
 tar -xvf make-4.1.tar.bz2
 cd make-4.1
 ./configure --prefix=/usr

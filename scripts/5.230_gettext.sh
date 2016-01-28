@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 23: Gettext-0.19.5.1
 #####################################################################
+source ../lfs_profile
 tar -xvf gettext-0.19.5.1.tar.xz
 cd gettext-0.19.5.1
 cd gettext-tools

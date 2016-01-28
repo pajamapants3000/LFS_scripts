@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.5 SBU
 # Required disk space: 111 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf groff-1.22.3.tar.gz
 cd groff-1.22.3
 PAGE=letter ./configure --prefix=/usr

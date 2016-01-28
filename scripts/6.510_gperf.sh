@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 51: gperf-3.0.4
 #####################################################################
+source ../lfs_profile
 tar -xvf gperf-3.0.4.tar.gz
 cd gperf-3.0.4
 ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.0.4

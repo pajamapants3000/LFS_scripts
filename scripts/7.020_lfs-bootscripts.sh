@@ -6,6 +6,7 @@ set +h
 # Approximate build time: less than 0.1 SBU
 # Required disk space: 244 KB
 #####################################################################
+source ../lfs_profile
 tar -xvf lfs-bootscripts-20150222.tar.bz2
 cd lfs-bootscripts-20150222
 make install

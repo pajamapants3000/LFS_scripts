@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 35: readline-6.3
 #####################################################################
+source ../lfs_profile
 tar -xvf readline-6.3.tar.gz
 cd readline-6.3
 patch -Np1 -i ../readline-6.3-upstream_fixes-3.patch

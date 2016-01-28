@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 16: bash-4.3.30
 #####################################################################
+source ../lfs_profile
 tar -xvf bash-4.3.30.tar.gz
 cd bash-4.3.30
 ./configure --prefix=/tools --without-bash-malloc

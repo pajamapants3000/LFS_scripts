@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 07: Linux-API-Headers
 #####################################################################
+source ../lfs_profile
 tar -xvf linux-${KVER}.tar.xz
 cd linux-${KVER}
 make mrproper

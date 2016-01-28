@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 56: gzip-1.6
 #####################################################################
+source ../lfs_profile
 tar -xvf gzip-1.6.tar.xz
 cd gzip-1.6
 ./configure --prefix=/usr --bindir=/bin

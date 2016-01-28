@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 22: gawk-4.1.3
 #####################################################################
+source ../lfs_profile
 tar -xvf gawk-4.1.3.tar.xz
 cd gawk-4.1.3
 ./configure --prefix=/tools

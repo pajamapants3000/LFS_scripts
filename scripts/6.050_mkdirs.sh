@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 5: Creating Directories
 #####################################################################
+source ../lfs_profile
 mkdir -pv /{bin,boot,etc/{opt,sysconfig},home,lib,mnt,opt}
 mkdir -pv /{media/{floppy,cdrom},sbin,srv,var}
 install -dv -m 0750 /root

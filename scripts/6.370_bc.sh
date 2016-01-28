@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 37: bc-1.06.95
 #####################################################################
+source ../lfs_profile
 tar -xvf bc-1.06.95.tar.bz2
 cd bc-1.06.95
 patch -Np1 -i ../bc-1.06.95-memory_leak-1.patch

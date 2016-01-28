@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 29: perl-5.22.0
 #####################################################################
+source ../lfs_profile
 tar -xvf perl-5.22.0.tar.bz2
 cd perl-5.22.0
 sh Configure -des -Dprefix=/tools -Dlibs=-lm

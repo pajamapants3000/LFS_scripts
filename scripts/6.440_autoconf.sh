@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 44: autoconf-2.69
 #####################################################################
+source ../lfs_profile
 tar -xvf autoconf-2.69.tar.xz
 cd autoconf-2.69
 ./configure --prefix=/usr

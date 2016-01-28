@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 65: tar-1.28
 #####################################################################
+source ../lfs_profile
 tar -xvf tar-1.28.tar.xz
 cd tar-1.28
 FORCE_UNSAFE_CONFIGURE=1      \

@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 59: kmod-21
 #####################################################################
+source ../lfs_profile
 tar -xvf kmod-21.tar.xz
 cd kmod-21
 ./configure --prefix=/usr  \

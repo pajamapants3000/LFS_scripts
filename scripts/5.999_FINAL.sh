@@ -3,7 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Final - su to root before running!
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 cd $LFS
 chown -R root:root $LFS/tools
 chown -R root:root $LFS/sources

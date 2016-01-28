@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 33: bison-3.0.4
 #####################################################################
+source ../lfs_profile
 tar -xvf bison-3.0.4.tar.xz
 cd bison-3.0.4
 ./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.0.4

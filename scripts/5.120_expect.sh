@@ -5,6 +5,7 @@
 # Approximate build time: 0.1 SBU
 # Required disk space: 4.3 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf expect5.45.tar.gz
 cd expect5.45
 cp -v configure{,.orig}

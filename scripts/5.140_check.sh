@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 14: Check-0.10.0
 #####################################################################
+source ../lfs_profile
 tar -xvf check-0.10.0.tar.gz
 cd check-0.10.0
 PKG_CONFIG= ./configure --prefix=/tools

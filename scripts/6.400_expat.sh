@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 40: expat-2.1.0
 #####################################################################
+source ../lfs_profile
 tar -xvf expat-2.1.0.tar.gz
 cd expat-2.1.0
 ./configure --prefix=/usr

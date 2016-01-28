@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 10.5: Sanity Check
 #####################################################################
+source ../lfs_profile
 echo 'int main(){}' > dummy.c
 cc dummy.c
 echo "Sanity Check 2" >> logs/sanitychecks

@@ -6,6 +6,7 @@ set +h
 # Approximate build time: less than 0.1 SBU
 # Required disk space: 1.4 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf libcap-2.24.tar.xz
 cd libcap-2.24
 make

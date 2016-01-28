@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 60: libpipeline-1.4.1
 #####################################################################
+source ../lfs_profile
 tar -xvf libpipeline-1.4.1.tar.gz
 cd libpipeline-1.4.1
 PKG_CONFIG_PATH=/tools/lib/pkgconfig ./configure --prefix=/usr

@@ -8,7 +8,7 @@ set +h
 # The trick here is making sure you have the .config ready!
 # If the version changes, be sure to update lfs_profile (and blfs_profile!)
 #
-. lfs_profile
+source ../lfs_profile
 # If /boot is on separate partition:
 [ ${BOOTDEV} ] && mount ${BOOTDEV} /boot || ( exit 0 )
 tar -xvf linux-$KVER.tar.xz

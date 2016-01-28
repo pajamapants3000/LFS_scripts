@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.8 SBU
 # Required disk space: 170 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf grub-2.02~beta2.tar.xz
 cd grub-2.02~beta2
 ./configure --prefix=/usr  \

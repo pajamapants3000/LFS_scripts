@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.4 SBU
 # Required disk space: 29 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf pkg-config-0.28.tar.gz
 cd pkg-config-0.28
 ./configure --prefix=/usr         \

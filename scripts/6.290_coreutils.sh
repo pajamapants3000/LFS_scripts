@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 6.29: coreutils-8.24
 #####################################################################
+source ../lfs_profile
 tar -xvf coreutils-8.24.tar.xz
 cd coreutils-8.24
 patch -Np1 -i ../coreutils-8.24-i18n-1.patch

@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 11: tcl-core8.6.4
 #####################################################################
+source ../lfs_profile
 tar -xvf tcl-core8.6.4-src.tar.gz
 cd tcl8.6.4
 cd unix

@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 68: util-linux
 #####################################################################
+source ../lfs_profile
 VER=2.27
 tar -xvf util-linux-${VER}.tar.xz
 cd util-linux-${VER}

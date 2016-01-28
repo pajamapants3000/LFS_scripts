@@ -4,7 +4,7 @@ set +h
 # Chapter 8: Making LFS Bootable
 # Section 2: fstab
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 cat > /etc/fstab << "EOF"
 # Begin /etc/fstab
 

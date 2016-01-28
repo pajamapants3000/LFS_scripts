@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 57: iproute2
 #####################################################################
+source ../lfs_profile
 VER=4.2.0
 tar -xvf iproute2-${VER}.tar.xz
 cd iproute2-${VER}

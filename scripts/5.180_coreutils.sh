@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 18: Coreutils-8.24
 #####################################################################
+source ../lfs_profile
 tar -xvf coreutils-8.24.tar.xz
 cd coreutils-8.24
 ./configure --prefix=/tools --enable-install-program=hostname

@@ -5,6 +5,7 @@
 # Approximate build time: 0.4 SBU
 # Required disk space: 32 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf tar-1.28.tar.xz
 cd tar-1.28
 ./configure --prefix=/tools

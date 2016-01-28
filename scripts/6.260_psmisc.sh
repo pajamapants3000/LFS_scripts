@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 26: psmisc-22.21
 #####################################################################
+source ../lfs_profile
 tar -xvf psmisc-22.21.tar.gz
 cd psmisc-22.21
 ./configure --prefix=/usr

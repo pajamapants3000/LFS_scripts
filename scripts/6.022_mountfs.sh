@@ -5,6 +5,7 @@ set +h
 # Section 2: Preparing Virtual Kernel File Systems
 # Part 2: Mount Virtual Filesystems
 #####################################################################
+source ../lfs_profile
 mount -v --bind /dev $LFS/dev
 mount -vt devpts devpts $LFS/dev/pts -o gid=5,mode=620
 mount -vt proc proc $LFS/proc

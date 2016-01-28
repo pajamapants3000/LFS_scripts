@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 48: findutils-4.4.2
 #####################################################################
+source ../lfs_profile
 tar -xvf findutils-4.4.2.tar.gz
 cd findutils-4.4.2
 ./configure --prefix=/usr --localstatedir=/var/lib/locate

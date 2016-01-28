@@ -3,7 +3,7 @@ set +h
 # Linux From Scratch
 # Chapter : The End!
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 userdel -r lfs
 rm /tools
 sed -i 's@^### Begin LFS Additions ###$@@' /etc/profile

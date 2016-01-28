@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 32: flex-2.5.39
 #####################################################################
+source ../lfs_profile
 tar -xvf flex-2.5.39.tar.xz
 cd flex-2.5.39
 # Proceed...

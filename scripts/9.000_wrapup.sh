@@ -3,7 +3,7 @@ set +h
 # Linux From Scratch
 # Chapter : The End!
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 echo $LFSVER > /etc/lfs-release
 cat > /etc/lsb-release << "EOF"
 DISTRIB_ID="Linux From Scratch"

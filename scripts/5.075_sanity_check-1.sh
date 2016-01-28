@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 7.5: Sanity Check
 #####################################################################
+source ../lfs_profile
 echo 'main(){}' > dummy.c
 $LFS_TGT-gcc dummy.c
 echo "Sanity Check 1" >> logs/sanitychecks

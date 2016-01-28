@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 31: m4-1.4.17
 #####################################################################
+source ../lfs_profile
 tar -xvf m4-1.4.17.tar.xz
 cd m4-1.4.17
 ./configure --prefix=/usr

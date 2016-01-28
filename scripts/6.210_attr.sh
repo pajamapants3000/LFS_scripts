@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 21: attr-2.4.47
 #####################################################################
+source ../lfs_profile
 tar -xvf attr-2.4.47.src.tar.gz
 cd attr-2.4.47
 sed -i -e 's|/@pkg_name@|&-@pkg_version@|' include/builddefs.in

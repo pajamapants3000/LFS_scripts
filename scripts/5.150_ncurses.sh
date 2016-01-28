@@ -3,6 +3,7 @@
 # Chapter 5: Constructing a Temporary System
 # Section 15: ncurses-6.0
 #####################################################################
+source ../lfs_profile
 tar -xvf ncurses-6.0.tar.gz
 cd ncurses-6.0
 ./configure --prefix=/tools \

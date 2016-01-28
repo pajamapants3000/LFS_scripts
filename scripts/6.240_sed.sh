@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.2 SBU
 # Required disk space: 10.9 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf sed-4.2.2.tar.bz2
 cd sed-4.2.2
 ./configure --prefix=/usr --bindir=/bin --htmldir=/usr/share/doc/sed-4.2.2

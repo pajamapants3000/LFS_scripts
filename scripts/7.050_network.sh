@@ -4,7 +4,7 @@ set +h
 # Chapter 7: System Configuration and Bootscripts
 # Section 5: General Network Configuration
 #####################################################################
-. lfs_profile
+source ../lfs_profile
 cd /etc/sysconfig/
 for DEV in ${IFACE[@]}; do
     cat > ifconfig.$DEV << "EOF"

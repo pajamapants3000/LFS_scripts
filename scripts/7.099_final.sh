@@ -4,6 +4,7 @@ set +h
 # Chapter 7: System Configuration and Bootscripts
 # Final
 #####################################################################
+source ../lfs_profile
 # How was I assuming these directories all existed!? Here's some safety:
 # Untested:
 install -dm1755 -o root -g root /etc/sysconfig
@@ -66,9 +67,7 @@ fi
 #cp -vR /etc/skel/* /root/
 #cp -vR /etc/skel/. /root/
 #
-#  Source lfs_profile and then add lines to /etc/profile
-#+ so that the system always knows its name!
-. lfs_profile
+# Add lines to /etc/profile so that the system always knows its name!
 sed -i 's@^\(# End /etc/profile\)$@export CHRISTENED=\"'$CHRISTENED\
 "\"\nexport SURNAME=\""$SURNAME"\"\n\n\1@" /etc/profile
 #####################################################################

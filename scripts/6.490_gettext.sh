@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 49: gettext-0.19.5.1
 #####################################################################
+source ../lfs_profile
 tar -xvf gettext-0.19.5.1.tar.xz
 cd gettext-0.19.5.1
 ./configure --prefix=/usr --disable-static \

@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 6.28: e2fsprogs
 #####################################################################
+source ../lfs_profile
 tar -xvf e2fsprogs-1.42.13.tar.gz
 cd e2fsprogs-1.42.13
 #

@@ -5,6 +5,7 @@
 # Approximate build time: 0.1 SBU
 # Required disk space: 10.1 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf sed-4.2.2.tar.bz2
 cd sed-4.2.2
 ./configure --prefix=/tools

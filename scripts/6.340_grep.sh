@@ -6,6 +6,7 @@ set +h
 # Approximate build time: 0.4 SBU
 # Required disk space: 30 MB
 #####################################################################
+source ../lfs_profile
 tar -xvf grep-2.21.tar.xz
 cd grep-2.21
 ./configure --prefix=/usr --bindir=/bin

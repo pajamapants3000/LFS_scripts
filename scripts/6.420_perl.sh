@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 42: perl-5.22.0
 #####################################################################
+source ../lfs_profile
 tar -xvf perl-5.22.0.tar.bz2
 cd perl-5.22.0
 echo "127.0.0.1 localhost $(hostname)" > /etc/hosts

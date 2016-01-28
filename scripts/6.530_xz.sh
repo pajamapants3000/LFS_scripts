@@ -4,6 +4,7 @@ set +h
 # Chapter 6: Installing Basic System Software
 # Section 53: xz-5.2.1
 #####################################################################
+source ../lfs_profile
 tar -xvf xz-5.2.1.tar.xz
 cd xz-5.2.1
 sed -e '/mf\.buffer = NULL/a next->coder->mf.size = 0;' \
